@@ -1,0 +1,105 @@
+/* Fade-in animation for page load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: rgba(255,255,255,0.05);
+}
+nav a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: gold;
+}
+
+/* Hero */
+.hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Products cards */
+.products {
+  display: flex;
+  gap: 40px;
+  padding: 80px;
+}
+.card {
+  width: 250px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(255,215,0,0.4);
+}
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Product detail page */
+.product-detail {
+  display: flex;
+  padding: 80px;
+  gap: 50px;
+  animation: fadeIn 1s ease;
+}
+.product-detail img {
+  width: 400px;
+  border-radius: 20px;
+}
+.info h1 { font-size: 40px; }
+.info h2 { color: gold; margin: 20px 0; }
+
+/* Button animation */
+button {
+  padding: 15px 40px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Back link */
+.back {
+  color: gold;
+  margin: 20px;
+  display: inline-block;
+  text-decoration: none;
+}
